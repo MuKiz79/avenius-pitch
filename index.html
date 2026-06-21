@@ -917,7 +917,7 @@
     var rangeEl=document.getElementById("w-range");
     var subEl=document.getElementById("w-sub");
     var flLabel=document.getElementById("w-flaeche-label");
-    function eur(n){return Math.round(n/1000)*1000===n?Math.round(n).toLocaleString("de-DE")+" €":Math.round(n).toLocaleString("de-DE")+" €";}
+    function k(n){return (Math.round(n/1000)*1000).toLocaleString("de-DE");}
     function ageFactor(by){
       if(!by) return 1;
       if(by>=2018) return 1.06; if(by>=2000) return 1.0;
@@ -941,7 +941,7 @@
         subEl.textContent="Spanne für "+ort+" · "+(typ==="haus"?"Haus":"Wohnung")+".";
       }
       rangeEl.className="wert-range";
-      rangeEl.textContent=eur(mid*0.93)+" – "+eur(mid*1.07);
+      rangeEl.textContent=k(mid*0.93)+" – "+k(mid*1.07)+" €";
     }
     tabs.forEach(function(t){t.addEventListener("click",function(){
       tabs.forEach(function(x){x.classList.remove("is-active");});

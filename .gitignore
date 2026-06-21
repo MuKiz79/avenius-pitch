@@ -1,0 +1,9 @@
+# dev artefacts / screenshots
+preview-*.png
+.DS_Store
+
+# unreferenced source/fallback assets (kept local, not shipped)
+assets/hero.jpg
+assets/hero-clean.jpg
+assets/hero-stuttgart.jpg
+assets/t8_mystery.jpg

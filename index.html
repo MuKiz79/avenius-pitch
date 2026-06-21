@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="de" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>U. Avenius Immobilien — Maklerhaus in Stuttgart, seit 1977</title>
+<meta name="description" content="Familiengeführtes Maklerhaus in Stuttgart seit 1977. Verkauf, Vermietung und Hausverwaltung von Wohn- und Gewerbeimmobilien in der Region Stuttgart — seit 1977 unter Stuttgarts bestbewerteten Maklerhäusern. Immobilienvermarktung ist Vertrauenssache.">
+<meta name="theme-color" content="#181b1c">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%23181b1c'/%3E%3Cpath d='M22 46 L50 28 L78 46' fill='none' stroke='%23b7975a' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ctext x='50' y='74' font-family='Georgia,serif' font-size='34' fill='%23f3efe6' text-anchor='middle' letter-spacing='1'%3EA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    /* PAPIER drei Werte (≥7% Tonwertdifferenz) */
+    --paper:#eef0ed; --paper-2:#e7ebe8; --paper-3:#dde3df;
+    --card:#f7f8f6;            /* kein Reinweiss in der Flaeche */
+    --ink:#181b1c; --ink-2:#1e2224;
+    --muted:#4f5559; --muted-2:#7b817d;
+    /* --brass NUR fuer: hero-em, primaere CTA, Bewertungs-Stern, Praegesiegel, Haarlinie */
+    --brass:#9c7b40; --brass-2:#b7975a;
+    --sage:#dbe2dd;
+    --line:rgba(24,27,28,.10);
+    --line-d:rgba(238,240,237,.16);
+    --maxw:1180px;
+    --r:12px; --r-lg:18px;
+    --ease:cubic-bezier(.22,.61,.36,1);
+    /* 8px-Spacing-Skala */
+    --s3:24px; --s4:32px; --s5:40px; --s6:48px; --s8:64px; --s10:80px; --s12:96px; --s16:128px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth;font-optical-sizing:auto;hanging-punctuation:first last}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  body{
+    margin:0;
+    font-family:"Inter",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+    color:var(--ink);
+    background:var(--paper);
+    -webkit-font-smoothing:antialiased;
+    line-height:1.6;
+    font-size:17px;
+    font-variant-numeric:oldstyle-nums proportional-nums;
+    font-feature-settings:'onum' 1,'pnum' 1;
+  }
+  h1,h2,h3{font-family:"Fraunces",Georgia,"Times New Roman",serif;font-weight:500;line-height:1.06;letter-spacing:-.014em;margin:0}
+  h1,h2{text-wrap:balance}
+  p{margin:0;text-wrap:pretty}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+  .eyebrow{font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted-2);font-weight:600}
+  .lede{color:var(--muted);font-size:1.1rem;max-width:56ch}
+  .gable{display:inline-block;vertical-align:middle;margin-right:.6em}
+
+  /* ---------- Buttons / Links ---------- */
+  .btn{display:inline-flex;align-items:center;gap:.55em;font-weight:600;font-size:.96rem;padding:.92em 1.5em;border-radius:999px;border:1px solid transparent;transition:background .25s,color .25s,border-color .25s,box-shadow .25s;cursor:pointer}
+  .btn-primary{background:var(--ink);color:var(--paper)}
+  .btn-primary:hover{background:#000;box-shadow:0 8px 22px -12px rgba(24,27,28,.55)}
+  .btn-ghost{border-color:var(--line);color:var(--ink)}
+  .btn-ghost:hover{border-color:var(--ink)}
+  .btn-brass{background:var(--brass);color:#fff}
+  .btn-brass:hover{background:var(--brass-2);box-shadow:0 8px 22px -12px rgba(156,123,64,.5)}
+  .btn:active{transform:translateY(1px);transition-duration:.05s}
+  .arrow{transition:transform .25s var(--ease)}
+  .btn:hover .arrow{transform:translateX(3px)}
+  .textlink{position:relative;font-weight:600;color:var(--ink);padding-bottom:3px;align-self:center}
+  .textlink::after{content:"";position:absolute;left:0;bottom:0;height:1px;width:100%;background:var(--brass);transform-origin:left;transition:transform .3s var(--ease)}
+  .textlink:hover::after{transform:scaleX(.4)}
+
+  /* ---------- Header ---------- */
+  header{position:sticky;top:0;z-index:50;transition:background .3s,box-shadow .3s,backdrop-filter .3s;border-bottom:1px solid transparent}
+  header.solid{background:rgba(238,240,237,.88);backdrop-filter:saturate(140%) blur(12px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:78px;transition:height .35s var(--ease)}
+  header.solid .nav{height:64px}
+  .brand-logo{height:40px;width:auto;transition:height .35s var(--ease)}
+  header.solid .brand-logo{height:34px}
+  .nav-links{display:flex;gap:28px;align-items:center}
+  .nav-links a{position:relative;font-size:.92rem;color:var(--muted);font-weight:500;transition:color .2s}
+  .nav-links a:hover{color:var(--ink)}
+  .nav-links a::after{content:"";position:absolute;left:0;bottom:-5px;height:1px;width:100%;background:var(--brass);transform:scaleX(0);transform-origin:left;transition:transform .3s var(--ease)}
+  .nav-links a:hover::after{transform:scaleX(1)}
+  .nav-cta{display:flex;align-items:center;gap:18px}
+  .nav-phone{font-weight:600;font-size:.95rem;white-space:nowrap;font-variant-numeric:tabular-nums}
+  @media (max-width:960px){.nav-links{display:none}.nav-phone{display:none}}
+
+  /* ---------- Hero ---------- */
+  .hero{padding:var(--s8) 0 var(--s12)}
+  .hero-grid{display:grid;grid-template-columns:.92fr 1.08fr;gap:var(--s8);align-items:stretch}
+  .hero-copy{display:flex;flex-direction:column;justify-content:center}
+  .hero h1{font-size:clamp(2.8rem,6.4vw,5.4rem);letter-spacing:-.022em;font-variation-settings:'opsz' 144,'wght' 500;margin:20px 0 16px;max-width:15ch}
+  .hero h1 em{font-style:italic;color:var(--brass)}
+  .claim{font-family:"Fraunces",serif;font-style:italic;font-size:clamp(1.3rem,1.8vw,1.65rem);color:var(--ink);max-width:24ch;margin:0 0 22px}
+  .hero .lede{font-size:1.06rem;color:var(--muted)}
+  .hero-actions{display:flex;flex-wrap:wrap;gap:22px;align-items:center;margin-top:var(--s5)}
+  /* photo */
+  .hero-photo{position:relative;border-radius:4px;overflow:hidden;border:1px solid var(--line);min-height:clamp(440px,52vw,600px);height:100%;box-shadow:0 2px 6px rgba(24,27,28,.05),0 40px 80px -48px rgba(24,27,28,.3)}
+  .hero-photo::after{content:"";position:absolute;inset:0;box-shadow:inset 0 0 0 1px rgba(183,151,90,.28);pointer-events:none;z-index:2}
+  .hero-photo::before{content:"";position:absolute;top:0;left:0;right:0;height:34%;background:linear-gradient(180deg,rgba(24,27,28,.42),transparent);pointer-events:none;z-index:1}
+  .hero-photo>img.hero-bg{width:100%;height:100%;object-fit:cover}
+  .photo-tag{position:absolute;top:20px;left:20px;z-index:3;color:#fff;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;padding:4px 0 4px 12px;border-left:2px solid var(--brass-2);text-shadow:0 1px 3px rgba(0,0,0,.65),0 2px 14px rgba(0,0,0,.5)}
+  .hero-seal{position:absolute;bottom:0;left:0;z-index:3;margin:0;padding:18px 22px;background:rgba(24,27,28,.62);backdrop-filter:blur(8px) saturate(140%);color:var(--paper);border-top:1px solid rgba(183,151,90,.5);border-right:1px solid rgba(183,151,90,.5);border-radius:0 14px 0 18px}
+  .hero-seal .v{display:block;font-family:"Fraunces",serif;font-size:2rem;line-height:1;font-variant-numeric:oldstyle-nums}
+  .hero-seal .v small{color:var(--brass-2);font-size:.5em;margin-left:.1em}
+  .hero-seal .rule{display:block;width:34px;height:1px;background:var(--brass-2);margin:10px 0 8px}
+  .hero-seal .cap{font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(238,240,237,.82)}
+  @media (max-width:880px){
+    .hero-grid{grid-template-columns:1fr;gap:var(--s6)}
+    .hero-photo{aspect-ratio:1.2;min-height:0;order:-1}
+  }
+
+  /* ---------- Metrics ---------- */
+  .metrics{background:linear-gradient(180deg,#1d2122,#181b1c);color:var(--paper);box-shadow:inset 0 1px 0 rgba(238,240,237,.06)}
+  .metrics .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:32px;padding:var(--s8) 28px}
+  .metric:not(:first-child){padding-left:32px;border-left:1px solid var(--line-d)}
+  .metric .num{font-family:"Fraunces",serif;font-size:clamp(2.1rem,3.6vw,3rem);font-weight:500;color:#fff;line-height:1;font-variant-numeric:oldstyle-nums proportional-nums}
+  .metric .num small{color:var(--brass-2);font-size:.5em;font-weight:600;margin-left:.15em;font-variant-numeric:normal}
+  .metric .lab{margin-top:12px;font-size:.86rem;color:rgba(238,240,237,.66);line-height:1.45}
+  @media (max-width:760px){.metrics .wrap{grid-template-columns:1fr 1fr;gap:30px 26px}.metric:nth-child(odd){padding-left:0;border-left:none}}
+
+  /* ---------- Sections ---------- */
+  section{padding:var(--s12) 0}
+  .sec-head{max-width:64ch}
+  .sec-head h2{font-size:clamp(2rem,3.6vw,2.9rem);font-variation-settings:'opsz' 80,'wght' 500;margin:0 0 22px}
+  .kicker-row{display:flex;align-items:baseline;gap:14px;margin-bottom:18px}
+  .kicker-row .no{font-family:"Fraunces",serif;color:var(--ink);opacity:.45;font-size:.95rem;font-variation-settings:'opsz' 18,'wght' 500}
+
+  /* Leistungen */
+  .services{display:grid;grid-template-columns:repeat(3,1fr);margin-top:var(--s8);border-top:1px solid var(--line)}
+  .service{padding:var(--s4) 30px 36px;border-bottom:1px solid var(--line);border-right:1px solid var(--line)}
+  .service:nth-child(3n){border-right:none}
+  .service .si{font-family:"Fraunces",serif;color:var(--ink);opacity:.55;font-size:.98rem;font-variation-settings:'opsz' 18,'wght' 500}
+  .service h3{font-size:1.42rem;margin:14px 0 10px}
+  .service p{color:var(--muted);font-size:.97rem;hyphens:auto;-webkit-hyphens:auto}
+  @media (max-width:820px){.services{grid-template-columns:1fr 1fr}.service:nth-child(3n){border-right:1px solid var(--line)}.service:nth-child(2n){border-right:none}}
+  @media (max-width:520px){.services{grid-template-columns:1fr}.service{border-right:none!important}}
+
+  /* Vermarktung dark */
+  .market{background:linear-gradient(180deg,#23282a,#1e2224);color:var(--paper)}
+  .market .eyebrow{color:var(--brass-2)}
+  .market h2{color:#fff}
+  .market .lede{color:rgba(238,240,237,.74)}
+  .pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:var(--s8)}
+  .pillar{background:rgba(238,240,237,.05);border:1px solid rgba(238,240,237,.10);border-radius:var(--r);padding:32px 28px}
+  .pillar .pn{font-family:"Fraunces",serif;color:var(--brass-2);font-size:1.05rem;font-variation-settings:'opsz' 24,'wght' 500;letter-spacing:.08em}
+  .pillar h3{color:#fff;font-size:1.3rem;margin:14px 0 14px}
+  .pillar ul{list-style:none;margin:0;padding:0}
+  .pillar li{position:relative;padding-left:22px;color:rgba(238,240,237,.78);font-size:.95rem;margin:9px 0;line-height:1.5;hyphens:auto;-webkit-hyphens:auto}
+  .pillar li::before{content:"";position:absolute;left:0;top:.62em;width:8px;height:1px;background:var(--brass-2)}
+  @media (max-width:820px){.pillars{grid-template-columns:1fr}}
+
+  /* Bewertungen / Auszeichnungen */
+  #bewertungen{background:var(--paper-3)}
+  .awards-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:var(--s6);margin-top:var(--s8);align-items:center}
+  .award-stats{display:grid;grid-template-columns:1fr 1fr;gap:0}
+  .stat{padding:24px 28px}
+  .stat:nth-child(n+3){border-top:1px solid var(--line)}
+  .stat:nth-child(even){border-left:1px solid var(--line)}
+  .stat .v{font-family:"Fraunces",serif;font-size:2.1rem;color:var(--ink);line-height:1;font-variant-numeric:oldstyle-nums proportional-nums}
+  .stat .v .s{color:var(--brass);font-size:.66em;font-variant-numeric:normal}
+  .stat .k{margin-top:10px;font-size:.85rem;color:var(--muted);line-height:1.45}
+  .seals{display:flex;flex-direction:column;gap:18px;align-items:center;justify-content:center;background:var(--card);border:1px solid var(--line);border-radius:var(--r-lg);padding:32px}
+  .seals .row{display:flex;align-items:center;gap:26px;flex-wrap:wrap;justify-content:center}
+  .seals img{height:104px;width:auto}
+  .seals .immoscout{height:118px;border-radius:10px;filter:grayscale(1) brightness(1.03);opacity:.92}
+  .seals .cap{font-size:.84rem;color:var(--muted);text-align:center;max-width:32ch}
+  @media (max-width:820px){.awards-grid{grid-template-columns:1fr;gap:var(--s5)}}
+  @media (max-width:440px){.award-stats{grid-template-columns:1fr}.stat:nth-child(even){border-left:none}.stat:nth-child(n+2){border-top:1px solid var(--line)}}
+
+  /* Verkauft band */
+  .sold{background:var(--sage);color:var(--ink)}
+  .sold .wrap{padding:var(--s5) 28px;display:flex;align-items:center;gap:30px;flex-wrap:wrap;justify-content:space-between}
+  .sold .lead{display:flex;align-items:center;gap:18px}
+  .sold .stamp{font-family:"Fraunces",serif;font-weight:600;letter-spacing:.06em;color:var(--ink);border:1.5px solid var(--ink);border-radius:6px;padding:5px 13px;transform:rotate(-5deg);font-size:.92rem;white-space:nowrap;opacity:.85}
+  .sold h3{font-size:1.4rem}
+  .sold .places{display:flex;gap:10px;flex-wrap:wrap}
+  .sold .place{background:rgba(24,27,28,.06);border:1px solid rgba(24,27,28,.12);border-radius:999px;padding:8px 16px;font-size:.9rem;font-weight:500}
+  .sold a{position:relative;font-weight:600;color:var(--ink);padding-bottom:2px;white-space:nowrap}
+  .sold a::after{content:"";position:absolute;left:0;bottom:0;height:1px;width:100%;background:var(--brass);transform-origin:left;transition:transform .3s var(--ease)}
+  .sold a:hover::after{transform:scaleX(.4)}
+
+  /* Team */
+  .team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;margin-top:var(--s8)}
+  .member{transition:transform .35s var(--ease)}
+  .member:hover{transform:translateY(-3px)}
+  .member .photo{border-radius:8px;overflow:hidden;aspect-ratio:1;background:var(--card)}
+  .member .photo img{width:100%;height:100%;object-fit:cover}
+  .member b{display:block;font-family:"Fraunces",serif;font-weight:500;font-size:1.16rem;margin-top:14px}
+  .member span{font-size:.88rem;color:var(--muted)}
+  .member .pets{display:flex;gap:8px}
+  .member .pets img{width:50%;border-radius:6px;aspect-ratio:1;object-fit:cover}
+  @media (max-width:820px){.team-grid{grid-template-columns:1fr 1fr}}
+  @media (max-width:520px){.team-grid{grid-template-columns:1fr}}
+
+  /* Engagement */
+  .engage{background:var(--paper-2);border-top:1px solid var(--line)}
+  .engage .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:44px;align-items:center}
+  .engage h2{font-size:clamp(1.7rem,3vw,2.4rem);font-variation-settings:'opsz' 60,'wght' 500}
+  .engage ul{list-style:none;margin:18px 0 0;padding:0;display:grid;gap:14px}
+  .engage li{display:flex;gap:14px;align-items:flex-start;font-size:1rem;color:var(--muted)}
+  .engage li b{color:var(--ink);font-weight:600}
+  .engage li .mk{flex:0 0 auto;color:var(--brass);font-family:"Fraunces",serif;font-size:1.05rem;line-height:1.4}
+  @media (max-width:820px){.engage .wrap{grid-template-columns:1fr;gap:24px}}
+
+  /* Downloads */
+  #downloads{background:var(--paper-3);border-top:1px solid var(--line)}
+  .dls{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:var(--s8)}
+  .dl{display:flex;flex-direction:column;gap:14px;padding:28px;border:1px solid var(--line);border-radius:var(--r);background:var(--card);transition:transform .3s var(--ease),border-color .3s}
+  .dl:hover{transform:translateY(-3px);border-color:var(--ink)}
+  .dl .ic{width:42px;height:42px;border-radius:10px;display:grid;place-items:center;background:rgba(24,27,28,.05);color:var(--ink);font-size:1.2rem}
+  .dl b{font-size:1.08rem;font-weight:600}
+  .dl p{color:var(--muted);font-size:.9rem;flex:1}
+  .dl .go{font-size:.86rem;font-weight:600;color:var(--muted);display:inline-flex;gap:.4em;align-items:center;transition:color .25s}
+  .dl:hover .go{color:var(--brass)}
+  @media (max-width:820px){.dls{grid-template-columns:1fr}}
+
+  /* Kontakt */
+  .contact{background:linear-gradient(180deg,#1d2122,#181b1c);color:var(--paper)}
+  .contact .eyebrow{color:var(--brass-2)}
+  .contact h2{color:#fff}
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:54px;margin-top:var(--s6)}
+  .cinfo-row{display:flex;gap:16px;padding:18px 0;border-bottom:1px solid var(--line-d)}
+  .cinfo-row:first-of-type{border-top:1px solid var(--line-d)}
+  .cinfo-row .k{flex:0 0 120px;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(238,240,237,.55);padding-top:3px}
+  .cinfo-row .v{font-size:1.04rem;color:#fff}
+  .cinfo-row .v.brand{font-variant:small-caps;letter-spacing:.04em}
+  .cinfo-row .v a:hover{color:var(--brass-2)}
+  .cinfo-row .v small{display:block;color:rgba(238,240,237,.6);font-size:.84rem;margin-top:2px;font-weight:400;font-variant:normal;letter-spacing:0}
+  .form{background:rgba(238,240,237,.04);border:1px solid var(--line-d);border-radius:var(--r-lg);padding:30px}
+  .form h3{color:#fff;font-size:1.4rem;margin-bottom:6px}
+  .form .note{color:rgba(238,240,237,.6);font-size:.86rem;margin-bottom:22px}
+  .field{margin-bottom:16px}
+  .field label{display:block;font-size:.8rem;color:rgba(238,240,237,.7);margin-bottom:7px}
+  .field input,.field textarea{width:100%;background:rgba(238,240,237,.06);border:1px solid var(--line-d);border-radius:10px;padding:.8em .9em;color:#fff;font-family:inherit;font-size:.96rem;transition:border-color .2s}
+  .field input:focus,.field textarea:focus{outline:none;border-color:var(--brass-2)}
+  .field textarea{resize:vertical;min-height:84px}
+  .form-msg{display:none;background:rgba(156,123,64,.16);border:1px solid rgba(183,151,90,.5);border-radius:12px;padding:20px 22px;color:#fff}
+  .form-msg b{display:block;font-family:"Fraunces",serif;font-size:1.2rem;margin-bottom:6px}
+  .form-msg span{color:rgba(238,240,237,.8);font-size:.92rem}
+  @media (max-width:820px){.contact-grid{grid-template-columns:1fr;gap:34px}}
+
+  /* Footer */
+  footer{background:#0f1213;color:rgba(238,240,237,.6);padding:var(--s6) 0 var(--s5);font-size:.88rem}
+  .foot-top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:24px;padding-bottom:28px;border-bottom:1px solid var(--line-d);align-items:center}
+  .foot-logo{height:54px;width:auto}
+  .foot-links{display:flex;flex-wrap:wrap;gap:22px}
+  .foot-links a{position:relative;transition:color .2s}
+  .foot-links a:hover{color:var(--brass-2)}
+  .foot-bottom{padding-top:24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;color:rgba(238,240,237,.42)}
+
+  /* ---------- Reveal / Motion ---------- */
+  .js [data-reveal]{opacity:0;transform:translateY(18px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+  .js [data-reveal].in{opacity:1;transform:none}
+  .js [data-stagger]>*{opacity:0;transform:translateY(16px);transition:opacity .65s var(--ease),transform .65s var(--ease)}
+  .js [data-stagger].in>*{opacity:1;transform:none}
+  @keyframes kenburns{from{transform:scale(1.06)}to{transform:scale(1)}}
+  .js .hero-bg{animation:kenburns 9s var(--ease) both}
+  .js .sold .stamp{opacity:0;transform:rotate(-12deg) scale(1.16);transition:opacity .5s var(--ease),transform .6s cubic-bezier(.34,1.4,.64,1)}
+  .js .sold .wrap.in .stamp{opacity:.85;transform:rotate(-5deg) scale(1)}
+  @media (prefers-reduced-motion:reduce){
+    .js [data-reveal],.js [data-stagger]>*{opacity:1!important;transform:none!important;transition:none}
+    .js .hero-bg{animation:none!important}
+    .js .sold .stamp{opacity:.85!important;transform:rotate(-5deg)!important;transition:none}
+    .btn,.member,.dl,.service,.pillar,.nav-links a::after,.textlink::after,.sold a::after{transition:none!important}
+  }
+</style>
+</head>
+<body>
+<script>document.documentElement.className="js";</script>
+
+<header id="top">
+  <div class="wrap nav">
+    <a href="#top" aria-label="U. Avenius Immobilien — Startseite"><img class="brand-logo" src="assets/logo-ink.png" alt="Avenius Immobilien — seit 1977 in Stuttgart"></a>
+    <nav class="nav-links" aria-label="Hauptnavigation">
+      <a href="#leistungen">Leistungen</a>
+      <a href="#vermarktung">Vermarktung</a>
+      <a href="#bewertungen">Bewertungen</a>
+      <a href="#team">Team</a>
+      <a href="#downloads">Downloads</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="nav-phone" href="tel:+4971166451010">0711 6645-1010</a>
+      <a class="btn btn-brass" href="#kontakt">Immobilie anbieten</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy" data-reveal>
+        <span class="eyebrow"><svg class="gable" width="26" height="13" viewBox="0 0 26 13" aria-hidden="true"><path d="M2 11 L13 2 L24 11" fill="none" stroke="#b7975a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Familienunternehmen · Stuttgart · seit 1977</span>
+        <h1>Seit 1977 vermitteln wir <em>Immobilien</em> in&nbsp;Stuttgart.</h1>
+        <p class="claim">„Immobilienvermarktung ist Vertrauenssache.“</p>
+        <p class="lede">Wir begleiten Eigentümer, Käufer und Mieter in Stuttgart und Umgebung — als Familienunternehmen, mit Marktkenntnis aus zwei Generationen und der Diskretion, die eine gute Immobilie verdient.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#kontakt">Wert Ihrer Immobilie ermitteln <span class="arrow">→</span></a>
+          <a class="textlink" href="#vermarktung">Unsere Vermarktung</a>
+        </div>
+      </div>
+      <div class="hero-photo" data-reveal data-count>
+        <img class="hero-bg" src="assets/hero-fernsehturm.jpg" alt="Der Stuttgarter Fernsehturm im Abendlicht über den bewaldeten Höhen der Stadt">
+        <span class="photo-tag">Stuttgart · Fernsehturm</span>
+        <figure class="hero-seal">
+          <span class="v">4,8<small>/5</small></span>
+          <span class="rule"></span>
+          <span class="cap">Bestbewertet · rund 1.600 Bewertungen</span>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- METRICS -->
+  <div class="metrics">
+    <div class="wrap" data-stagger data-count>
+      <div class="metric"><div class="num">49<small>Jahre</small></div><div class="lab">am Markt — gegründet 1977 als Familienbetrieb</div></div>
+      <div class="metric"><div class="num">~7.000</div><div class="lab">vermittelte Objekte seit Gründung</div></div>
+      <div class="metric"><div class="num">~150</div><div class="lab">vermittelte Immobilien pro Jahr im Schnitt</div></div>
+      <div class="metric"><div class="num">4,8<small>/5 ★</small></div><div class="lab">aus rund 1.600 Online-Bewertungen, 96,4 % Weiterempfehlung</div></div>
+    </div>
+  </div>
+
+  <!-- LEISTUNGEN -->
+  <section id="leistungen">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <div class="kicker-row"><span class="no">01</span><span class="eyebrow">Leistungen</span></div>
+        <h2>Ein Haus. Für Wohnen, Gewerbe und Verwaltung.</h2>
+        <p class="lede">Von der ersten Bewertung bis zur Schlüsselübergabe — alles aus einer Hand.</p>
+      </div>
+      <div class="services" data-stagger>
+        <div class="service"><div class="si">Verkauf</div><h3>Kaufen &amp; Verkaufen</h3><p>Wohnimmobilien in Stuttgart und Umgebung — fair bewertet, professionell präsentiert, sicher zum Notartermin geführt.</p></div>
+        <div class="service"><div class="si">Vermietung</div><h3>Mieten &amp; Vermieten</h3><p>Vorgemerkte Interessenten mit geprüfter Bonität, sorgfältige Auswahl und rechtssichere Mietverträge.</p></div>
+        <div class="service"><div class="si">Gewerbe</div><h3>Gewerbeimmobilien</h3><p>Büro-, Handels- und Anlageobjekte — vermittelt mit demselben Anspruch an Diskretion und Marktkenntnis.</p></div>
+        <div class="service"><div class="si">Verwaltung</div><h3>Hausverwaltung</h3><p>Werterhalt und ein verlässlicher Ansprechpartner für Eigentümer, die ihre Objekte in gute Hände geben.</p></div>
+        <div class="service"><div class="si">Bewertung</div><h3>Preisermittlung</h3><p>Eine realistische Einschätzung Ihrer Immobilie — Grundlage für jede erfolgreiche Vermarktung.</p></div>
+        <div class="service"><div class="si">Region</div><h3>Metropolregion Stuttgart</h3><p>Tief verwurzelt zwischen Halbhöhenlage und Umland — wir kennen die Lagen, ihre Preise und ihre Menschen.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VERMARKTUNG -->
+  <section id="vermarktung" class="market">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <div class="kicker-row"><span class="no" style="color:rgba(238,240,237,.5)">02</span><span class="eyebrow">Vermarktung</span></div>
+        <h2>Vom ersten Wertgespräch bis zur Schlüsselübergabe.</h2>
+        <p class="lede">Sie wollen Ihre Immobilie verkaufen oder vermieten? Wir übernehmen den gesamten Weg — transparent, persönlich und mit der nötigen Diskretion.</p>
+      </div>
+      <div class="pillars" data-stagger>
+        <div class="pillar"><div class="pn">I</div><h3>Vorgemerkte Interessenten</h3><ul><li>Permanente Kauf- und Mietgesuche in unserer Vormerkkartei</li><li>Interessenten mit geprüfter Bonität</li><li>Manche Objekte sind vergeben, bevor die Anzeige erscheint</li></ul></div>
+        <div class="pillar"><div class="pn">II</div><h3>Professionelles Marketing</h3><ul><li>Hochwertige Exposé-Erstellung</li><li>Präsentation in den führenden Online-Portalen</li><li>Anzeigen in der lokalen Presse</li></ul></div>
+        <div class="pillar"><div class="pn">III</div><h3>Rundum-Service</h3><ul><li>Preisermittlung &amp; Besichtigungstermine</li><li>Reservierungen &amp; notarielle Kaufvertragsentwürfe</li><li>Mietverträge &amp; Schlüsselübergabe</li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BEWERTUNGEN / AUSZEICHNUNGEN -->
+  <section id="bewertungen">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <div class="kicker-row"><span class="no">03</span><span class="eyebrow">Bewertungen &amp; Auszeichnungen</span></div>
+        <h2>Unter rund 250 Maklern in Stuttgart — mit am besten bewertet.</h2>
+        <p class="lede">Nicht unsere Worte, sondern die unserer Kundinnen und Kunden: rund 1.600 Online-Bewertungen auf den führenden Portalen — und ein Markt, der uns Recht gibt.</p>
+      </div>
+      <div class="awards-grid">
+        <div class="award-stats" data-stagger data-count>
+          <div class="stat"><div class="v">4,8<span class="s"> / 5</span></div><div class="k">ImmobilienScout24 — Bewertung „Exzellent“</div></div>
+          <div class="stat"><div class="v">96,4<span class="s"> %</span></div><div class="k">Weiterempfehlung durch unsere Kunden</div></div>
+          <div class="stat"><div class="v">~250</div><div class="k">Maklerhäuser in Stuttgart — wir gehören zu den bestbewerteten</div></div>
+          <div class="stat"><div class="v">~1.600</div><div class="k">Online-Bewertungen über alle Portale (ImmoScout24, Trustlocal, 11880 u. a.)</div></div>
+        </div>
+        <div class="seals" data-reveal>
+          <div class="row">
+            <img src="assets/badge-immoscout.png" class="immoscout" alt="ImmobilienScout24: Exzellent, 4,8 von 5 Sternen">
+            <img src="assets/badge-gold.png" alt="ImmobilienScout24 Gold-Partner">
+          </div>
+          <p class="cap">Kontaktdaten des Inhabers durch Trustlocal verifiziert.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VERKAUFT BAND -->
+  <div class="sold">
+    <div class="wrap" data-reveal>
+      <div class="lead">
+        <span class="stamp">VERKAUFT</span>
+        <h3>Zuletzt erfolgreich vermittelt in der Region</h3>
+      </div>
+      <div class="places">
+        <span class="place">Rielingshausen</span>
+        <span class="place">Stuttgart-Rot</span>
+        <span class="place">Kleiningersheim</span>
+        <span class="place">Calw · Hanglage mit Fernsicht</span>
+      </div>
+      <a href="https://www.stuttgart-wohnungssuche.de/referenzen/" target="_blank" rel="noopener">Alle Referenzen →</a>
+    </div>
+  </div>
+
+  <!-- TEAM -->
+  <section id="team">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <div class="kicker-row"><span class="no">04</span><span class="eyebrow">Das Team</span></div>
+        <h2>Menschen, die seit Jahren für Sie da sind.</h2>
+        <p class="lede">Ein eingespieltes Familienunternehmen — Sie sprechen mit denselben Ansprechpartnern, vom ersten Gespräch bis zum Abschluss. Und ja, auch die guten Seelen im Büro gehören dazu.</p>
+      </div>
+      <div class="team-grid" data-stagger>
+        <div class="member"><div class="photo"><img src="assets/t7_sven.jpg" alt="Sven Berger"></div><b>Sven Berger</b><span>Inhaber · Leitung Verkauf</span></div>
+        <div class="member"><div class="photo"><img src="assets/t6_thomas.jpg" alt="Thomas Burkhart"></div><b>Thomas Burkhart</b><span>Leitung Vermietung</span></div>
+        <div class="member"><div class="photo"><img src="assets/t3_petra.jpg" alt="Petra Berger"></div><b>Petra Berger</b><span>Leitung Office &amp; Administration</span></div>
+        <div class="member"><div class="photo"><img src="assets/t2_marcel.jpg" alt="Marcel Berger"></div><b>Marcel Berger</b><span>Immobilienmakler · Vermietung</span></div>
+        <div class="member"><div class="photo"><img src="assets/t1_carola.jpg" alt="Carola Ringel"></div><b>Carola Ringel</b><span>Immobilienmaklerin · Vermietung</span></div>
+        <div class="member"><div class="photo pets"><img src="assets/t4_lili.jpg" alt="Lili, Bürohund"><img src="assets/t5_lea.png" alt="Lea, Bürohund"></div><b>Lili &amp; Lea</b><span>Bürohunde · gute Seelen im Office</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ENGAGEMENT -->
+  <section class="engage">
+    <div class="wrap">
+      <div data-reveal>
+        <span class="eyebrow">Engagement</span>
+        <h2>Verwurzelt in der Region — auch über das Maklergeschäft hinaus.</h2>
+      </div>
+      <ul data-stagger>
+        <li><span class="mk">✦</span><span><b>Pate des Baby-Notarztwagens</b> der Björn-Steiger-Stiftung (2024).</span></li>
+        <li><span class="mk">✦</span><span><b>Förderer von „Retten macht Schule“</b> — Erste-Hilfe-Ausbildung an Schulen.</span></li>
+        <li><span class="mk">✦</span><span><b>Unterstützer des Schulfruchtprogramms</b> — gesunde Ernährung für Stuttgarter Schülerinnen und Schüler.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- DOWNLOADS -->
+  <section id="downloads">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <div class="kicker-row"><span class="no">05</span><span class="eyebrow">Downloads</span></div>
+        <h2>Unterlagen für Ihre Wohnungssuche.</h2>
+        <p class="lede">Bewerbungsbogen, Suchprofil und Widerrufsbelehrung — als PDF, jederzeit abrufbar.</p>
+      </div>
+      <div class="dls" data-stagger>
+        <a class="dl" href="https://www.stuttgart-wohnungssuche.de/downloads/" target="_blank" rel="noopener"><div class="ic" aria-hidden="true">▤</div><b>Bewerbungsbogen</b><p>Für Ihre Bewerbung auf eine Mietwohnung — datenschutzkonform nach DSGVO.</p><span class="go">PDF öffnen →</span></a>
+        <a class="dl" href="https://www.stuttgart-wohnungssuche.de/downloads/" target="_blank" rel="noopener"><div class="ic" aria-hidden="true">▤</div><b>Mietobjekt-Suchprofil</b><p>Sagen Sie uns, wonach Sie suchen — wir melden uns mit passenden Objekten.</p><span class="go">PDF öffnen →</span></a>
+        <a class="dl" href="https://www.stuttgart-wohnungssuche.de/downloads/" target="_blank" rel="noopener"><div class="ic" aria-hidden="true">▤</div><b>Widerrufsbelehrung</b><p>Für Verbraucher — Ihre Rechte transparent und vollständig erläutert.</p><span class="go">PDF öffnen →</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- KONTAKT -->
+  <section id="kontakt" class="contact">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <div class="kicker-row"><span class="no" style="color:rgba(238,240,237,.5)">06</span><span class="eyebrow">Kontakt</span></div>
+        <h2>Sprechen wir über Ihre Immobilie.</h2>
+        <p class="lede">Ob Verkauf, Vermietung oder eine erste Einschätzung — wir nehmen uns Zeit. Am schnellsten erreichen Sie uns telefonisch.</p>
+      </div>
+      <div class="contact-grid">
+        <div data-reveal>
+          <div class="cinfo-row"><div class="k">Anschrift</div><div class="v brand">U. Avenius Immobilien<small>Inhaber Sven Berger · Vogelsangstraße 32 · 70197 Stuttgart</small></div></div>
+          <div class="cinfo-row"><div class="k">Telefon</div><div class="v"><a href="tel:+4971166451010">0711 6645-1010</a></div></div>
+          <div class="cinfo-row"><div class="k">E-Mail</div><div class="v"><a href="mailto:immo@avenius.de">immo@avenius.de</a><small>Verkauf: verkauf@avenius.de</small></div></div>
+          <div class="cinfo-row"><div class="k">Fax</div><div class="v">0711 6645-3539</div></div>
+          <div style="margin-top:30px"><a class="btn btn-brass" href="tel:+4971166451010">Jetzt anrufen</a></div>
+        </div>
+        <div data-reveal>
+          <form class="form" id="anfrage" novalidate>
+            <h3>Immobilie anbieten</h3>
+            <p class="note">Einige Eckdaten genügen — wir melden uns persönlich zurück.</p>
+            <div class="field"><label for="f-name">Name</label><input id="f-name" name="name" type="text" autocomplete="name" placeholder="Ihr Name"></div>
+            <div class="field"><label for="f-tel">Telefon</label><input id="f-tel" name="tel" type="tel" autocomplete="tel" placeholder="Mobil oder Festnetz"></div>
+            <div class="field"><label for="f-obj">Ihre Immobilie</label><textarea id="f-obj" name="objekt" placeholder="Art, Lage, Fläche, Zimmer, Baujahr, Preisvorstellung …"></textarea></div>
+            <button class="btn btn-brass" type="submit" style="width:100%;justify-content:center">Anfrage senden <span class="arrow">→</span></button>
+            <div class="form-msg" id="form-msg" role="status">
+              <b>Vielen Dank!</b>
+              <span>Dies ist eine Konzept-Vorschau. Ihre Anfrage erreicht uns am schnellsten telefonisch unter <a href="tel:+4971166451010" style="color:var(--brass-2)">0711&nbsp;6645-1010</a> oder per E-Mail an <a href="mailto:immo@avenius.de" style="color:var(--brass-2)">immo@avenius.de</a>.</span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <a href="#top"><img class="foot-logo" src="assets/logo-paper.png" alt="Avenius Immobilien"></a>
+      <div class="foot-links">
+        <a href="#leistungen">Leistungen</a>
+        <a href="#vermarktung">Vermarktung</a>
+        <a href="#bewertungen">Bewertungen</a>
+        <a href="#team">Team</a>
+        <a href="#downloads">Downloads</a>
+        <a href="#kontakt">Kontakt</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 1977–2026 U. Avenius Immobilien · Inhaber Sven Berger · Vogelsangstraße 32, 70197 Stuttgart · 0711 6645-1010</span>
+      <span>Impressum · Datenschutz · Widerruf</span>
+    </div>
+    <div style="margin-top:16px;font-size:.72rem;color:rgba(238,240,237,.32)">Stadtansicht: Stuttgarter Fernsehturm — Foto Julian Herzog, <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">CC BY 4.0</a>, via Wikimedia Commons.</div>
+  </div>
+</footer>
+
+<script>
+  var doc=document.documentElement;
+  var REDUCE=window.matchMedia&&window.matchMedia("(prefers-reduced-motion:reduce)").matches;
+  if(REDUCE) doc.classList.add("reduce");
+
+  // Sticky header — densify on scroll (rAF-throttled)
+  var header=document.querySelector("header"), ticking=false;
+  function applyHeader(){header.classList.toggle("solid",window.scrollY>48);ticking=false;}
+  applyHeader();
+  window.addEventListener("scroll",function(){if(!ticking){ticking=true;requestAnimationFrame(applyHeader);}},{passive:true});
+
+  // Count-up — Endwert steht im HTML (No-JS / reduced-motion safe)
+  function easeOutCubic(t){return 1-Math.pow(1-t,3);}
+  function deFmt(n,d){return n.toLocaleString("de-DE",{minimumFractionDigits:d,maximumFractionDigits:d});}
+  function countUp(el){
+    var tn=el.firstChild;
+    if(!tn||tn.nodeType!==3) return;
+    var raw=tn.nodeValue.trim();
+    if(!/[0-9]/.test(raw)) return;
+    var tilde=/^~/.test(raw);
+    var clean=raw.replace(/[~\s]/g,"");
+    var dec=clean.indexOf(",")>-1?clean.split(",")[1].length:0;
+    var target=parseFloat(clean.replace(/\./g,"").replace(",","."));
+    if(isNaN(target)) return;
+    var t0=null,dur=1100;
+    function step(now){
+      if(t0===null) t0=now;
+      var p=Math.min(1,(now-t0)/dur);
+      var v=target*easeOutCubic(p);
+      tn.nodeValue=(tilde?"~":"")+deFmt(dec?parseFloat(v.toFixed(dec)):Math.round(v),dec);
+      if(p<1) requestAnimationFrame(step);
+      else tn.nodeValue=(tilde?"~":"")+deFmt(target,dec);
+    }
+    requestAnimationFrame(step);
+  }
+
+  // Reveal + child-stagger + count, via one IntersectionObserver
+  var watched=document.querySelectorAll("[data-reveal],[data-stagger]");
+  function activate(el){
+    el.classList.add("in");
+    if(el.hasAttribute("data-stagger")){
+      var kids=el.children;
+      for(var i=0;i<kids.length;i++) kids[i].style.transitionDelay=(Math.min(i,8)*70)+"ms";
+    }
+    if(!REDUCE && el.hasAttribute("data-count")){
+      var nums=el.querySelectorAll(".num,.v");
+      for(var j=0;j<nums.length;j++) countUp(nums[j]);
+    }
+  }
+  if("IntersectionObserver" in window){
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(e.isIntersecting){ activate(e.target); io.unobserve(e.target); } });
+    },{rootMargin:"0px 0px -8% 0px",threshold:.14});
+    watched.forEach(function(el){io.observe(el);});
+  }else{
+    watched.forEach(activate);
+  }
+
+  // Concept contact form — honest, no fake delivery claim
+  var form=document.getElementById("anfrage");
+  if(form){
+    form.addEventListener("submit",function(ev){
+      ev.preventDefault();
+      var msg=document.getElementById("form-msg");
+      msg.style.display="block";
+      form.querySelector("button[type=submit]").style.display="none";
+      msg.scrollIntoView({behavior:REDUCE?"auto":"smooth",block:"center"});
+    });
+  }
+</script>
+</body>
+</html>
